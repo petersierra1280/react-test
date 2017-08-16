@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Widget from './Widget';
-import ReactButton from './ReactButton';
+import Wrapper from './ReactButton';
 
 class App extends React.Component {
   constructor() {
@@ -37,7 +37,7 @@ class App extends React.Component {
         <br />
         <Widget name="age" type="number" placeholder="age input" ref={ comp => this.age = comp } update={this.update.bind(this)} />
         <hr />
-        <ReactButton />
+        <Wrapper />
       </div>
     );
   }
