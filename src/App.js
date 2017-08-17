@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Widget from './Widget';
 import Wrapper from './ReactButton';
+import Ajax from './Ajax';
 
 class App extends React.Component {
   constructor() {
@@ -13,7 +14,7 @@ class App extends React.Component {
   }
   update (e) {
     const targetName = e.target.name;
-    const value = targetName == 'name' ? this.name : this.age;    
+    const value = targetName === 'name' ? this.name : this.age;    
 
     this.setState({
       [targetName]: ReactDOM.findDOMNode(value).value
@@ -38,6 +39,8 @@ class App extends React.Component {
         <Widget name="age" type="number" placeholder="age input" ref={ comp => this.age = comp } update={this.update.bind(this)} />
         <hr />
         <Wrapper />
+        <hr />
+        <Ajax />
       </div>
     );
   }
