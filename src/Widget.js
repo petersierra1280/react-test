@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Widget extends React.Component {
     render() {
@@ -9,9 +10,9 @@ class Widget extends React.Component {
 }
 
 Widget.propTypes = {
-    type: React.PropTypes.string,
-    placeholder: React.PropTypes.string,
-    name: React.PropTypes.string,
+    type: PropTypes.string,
+    placeholder: PropTypes.string,
+    name: PropTypes.string,
 }
 
 Widget.defaultProps = {

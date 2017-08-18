@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Widget from './Widget';
 import Wrapper from './ReactButton';
 import Ajax from './Ajax';
@@ -47,7 +48,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  name: React.PropTypes.string,
+  name: PropTypes.string,
   //example of making a property required (without using .isRequired)
   age(props, propName, component) {
     if (!(propName in props) || !props[propName]) {

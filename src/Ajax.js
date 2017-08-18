@@ -10,7 +10,7 @@ class Ajax extends React.Component {
             .then(response => response.json())
             .then(response => {
                 this.setState({ items: response });
-                console.log(response);
+                console.table(response);
             });
     }
     filter(e) {
